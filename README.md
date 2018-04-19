@@ -33,11 +33,11 @@ La guía de instalación debe contener de manera específica:
 Para utilizar Insidiosa, se requieren instalar los siguientes programas:
 
 * **Python 3.5** - *(o superior)* - [Python](https://www.python.org/downloads/)
-    * Se debe instalar el gestor de paquetes PIP *
+    * Se debe instalar el gestor de paquetes PIP 
 
 * **Paquete Audiovisual** - - [Logos](https://www.logos.net.ar/software/paquete-audiovisual)
    
-* **Librerias de Python** -   *Instalar con el siguiente comando*
+* **Librerias de Python** -   *Instalar con el siguiente comando
     pip install request
 
 ### Cómo contribuir
