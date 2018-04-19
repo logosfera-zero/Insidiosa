@@ -1,0 +1,15 @@
+{
+    "ruta_comentario": "En windows, la separación de directorios se hace con barra invertida, entonces cada vez que deba ser usada en este archivo de configuración, deben colocarse doble barra invertida por cada una que deba usarse.",
+    "ruta_comentario2": "Las rutas de carpeta deben terminar con barra o doble barra invertida si se usa windows",
+    "rutaProgramas": "Y:\\03 PGM\\01 PGM\\",
+    "rutaTandas": "Y:\\03 PGM\\02 TANDA UNITV\\",
+    "rutaTandasRelleno": "Y:\\03 PGM\\07 TANDAS RELLENO\\",
+    "rutaPromos": "Y:\\03 PGM\\05 PROMOS\\",
+    "rutaTransmision": "E:\\",
+    "nombreCarpeta": "Transmision",
+    "nombreCarpeta_comentario": "Entonces la pc de transmisión recibiría un m3u cuya ruta de cada archivo sea E:\\TransmisionXX\\nombrearchivo.mp4 donde XX representa el nro de lista creado.",
+    "rutaFFMPEG": "C:\\DMAOPS\\FFMPEG\\ffmpeg.exe",
+    "rutaExif": "C:\\DMAOPS\\EXIFTOOL\\exiftool.exe"
+   
+
+}

@@ -20,8 +20,8 @@ __email__ = "itula@logos.net.ar"
 __status__ = "Producción"
 
 
-def leerRutas():
-    json_file = "Configuracion/rutas.json"
+def leerConfiguracion(solicitud):
+    json_file = "Configuracion/" + solicitud + ".json"
     json_data= open(json_file,"r")
     json_prueba = json_data.readlines()
     json_data.close()
@@ -31,3 +31,15 @@ def leerRutas():
     data = json.load(json_data)
     json_data.close()
     return data
+
+
+
+def corregirDobleComilla(string):
+    nuevoString = ""
+    for i in string:
+        if i == "'":
+            nuevoString = nuevoString + "\""
+        else:
+            nuevoString = nuevoString + i
+
+    return nuevoString
