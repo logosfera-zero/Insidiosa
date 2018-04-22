@@ -9,6 +9,7 @@ de datos con las duraciones de los programas afectados, tandas y promos.
 import requests
 import json
 from aux_config import * 
+from aux_tiempos import * 
 import os
 import sys
 import subprocess
@@ -27,8 +28,11 @@ __status__ = "Desarrollo"
 
 
 config_rutas = leerConfiguracion("Rutas")
-config_programas = leerConfiguracion("Programas")
+config_programas = leerConfiguracion("Torta")
 matrizDatos = []
+
+
+
 
 
 def obtenerDuracionProgramas(transmision,temporada):
@@ -82,7 +86,7 @@ def obtenerDuracionProgramas(transmision,temporada):
                         print("Existe :" + stringComposicion)
                         matrizMenorDatos = []
                         matrizMenorDatos.append(stringComposicion)
-                        batcmd = '"' + config_rutas["rutaExif"] + '" -MediaDuration "'  + rutayString + '"' 
+                        batcmd = '"' + config_rutas["rutaExif"] + '" -api largefilesupport=1 -MediaDuration "'  + rutayString + '"' 
 
                         try:
                             duracion = str(subprocess.check_output(batcmd, shell=True))
@@ -101,6 +105,12 @@ def obtenerDuracionProgramas(transmision,temporada):
 
                     
                 if len(MatrizDelPrograma) != 0:
+
+                    dur = 0
+                    for blq in MatrizDelPrograma['Bloques']:
+                        dur = dur + DuracionHaciaSegundos(blq[1]) 
+                    
+                    MatrizDelPrograma['Duracion'] = SegundosHaciaDuracion(dur)
                     matrizDatos.append(MatrizDelPrograma)
 
     

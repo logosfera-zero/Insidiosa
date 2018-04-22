@@ -1,0 +1,21 @@
+{
+    "torta": "",
+    "_comentario": "obligatorio lo coloca si o si en la planificación. Si no es obligatorio se permite utilizarlo solo en los casos donde es necesario agregar programa para completar huecos vacios",
+    "TandasEntreBloques": 1,
+    "OrganizadoEnCarpetas": 1,
+    "CarpetasenMayusculas": 1,
+    "ExtensionDeVideoBuscada": ".mp4",
+    "programas":    [
+        {   "programa": "MundoU", "obligatorio": 1},
+        {   "programa": "Noroeste", "obligatorio": 1},
+        {   "programa": "Tramas", "obligatorio": 1},
+        {   "programa": "Debates", "obligatorio": 1},
+        {   "programa": "Periscopio", "obligatorio": 1},
+        {   "programa": "CajaNegra", "obligatorio": 1},
+        {   "programa": "Contracampo", "obligatorio": 1},
+        {   "programa": "Megafono", "obligatorio": 0},
+        {   "programa": "NotiU", "obligatorio": 0},
+        {   "programa": "EnCarerra", "obligatorio": 0}
+    
+    ]
+}

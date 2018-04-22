@@ -1,1 +1,109 @@
-[{"Programa": "MUNDOU", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": []}, {"Programa": "NOROESTE", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": [["PGM - NOROESTE - T2_P4 - BLQ1.mp4", "0:09:06"], ["PGM - NOROESTE - T2_P4 - BLQ2.mp4", "0:18:14"]]}, {"Programa": "TRAMAS", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": [["PGM - TRAMAS - T2_P4 - BLQ1.mp4", "0:09:57"], ["PGM - TRAMAS - T2_P4 - BLQ2.mp4", "0:10:15"], ["PGM - TRAMAS - T2_P4 - BLQ3.mp4", "0:09:08"]]}, {"Programa": "DEBATES", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": []}, {"Programa": "PERISCOPIO", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": [["PGM - PERISCOPIO - T2_P4 - BLQ1.mp4", "0:11:06"], ["PGM - PERISCOPIO - T2_P4 - BLQ2.mp4", "0:14:12"], ["PGM - PERISCOPIO - T2_P4 - BLQ3.mp4", "0:22:24"], ["PGM - PERISCOPIO - T2_P4 - BLQ4.mp4", "0:21:50"]]}, {"Programa": "CAJANEGRA", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": []}, {"Programa": "CONTRACAMPO", "Duracion": "DESCONOCIDA", "Obligatorio": True, "Bloques": [["PGM - CONTRACAMPO - T2_P4 - BLQ1.mp4", "0:12:27"], ["PGM - CONTRACAMPO - T2_P4 - BLQ2.mp4", ""]]}, {"Programa": "MEGAFONO", "Duracion": "DESCONOCIDA", "Obligatorio": False, "Bloques": [["PGM - MEGAFONO - T2_P4 - BLQ1.mp4", "0:13:46"]]}, {"Programa": "NOTIU", "Duracion": "DESCONOCIDA", "Obligatorio": False, "Bloques": []}]
+[
+    {
+        "Programa": "MUNDOU",
+        "Duracion": "0:0:0",
+        "Obligatorio": 1,
+        "Bloques": []
+    },
+    {
+        "Programa": "NOROESTE",
+        "Duracion": "0:27:20",
+        "Obligatorio": 1,
+        "Bloques": [
+            [
+                "PGM - NOROESTE - T2_P4 - BLQ1.mp4",
+                "0:09:06"
+            ],
+            [
+                "PGM - NOROESTE - T2_P4 - BLQ2.mp4",
+                "0:18:14"
+            ]
+        ]
+    },
+    {
+        "Programa": "TRAMAS",
+        "Duracion": "0:29:20",
+        "Obligatorio": 1,
+        "Bloques": [
+            [
+                "PGM - TRAMAS - T2_P4 - BLQ1.mp4",
+                "0:09:57"
+            ],
+            [
+                "PGM - TRAMAS - T2_P4 - BLQ2.mp4",
+                "0:10:15"
+            ],
+            [
+                "PGM - TRAMAS - T2_P4 - BLQ3.mp4",
+                "0:09:08"
+            ]
+        ]
+    },
+    {
+        "Programa": "DEBATES",
+        "Duracion": "0:0:0",
+        "Obligatorio": 1,
+        "Bloques": []
+    },
+    {
+        "Programa": "PERISCOPIO",
+        "Duracion": "1:9:32",
+        "Obligatorio": 1,
+        "Bloques": [
+            [
+                "PGM - PERISCOPIO - T2_P4 - BLQ1.mp4",
+                "0:11:06"
+            ],
+            [
+                "PGM - PERISCOPIO - T2_P4 - BLQ2.mp4",
+                "0:14:12"
+            ],
+            [
+                "PGM - PERISCOPIO - T2_P4 - BLQ3.mp4",
+                "0:22:24"
+            ],
+            [
+                "PGM - PERISCOPIO - T2_P4 - BLQ4.mp4",
+                "0:21:50"
+            ]
+        ]
+    },
+    {
+        "Programa": "CAJANEGRA",
+        "Duracion": "0:0:0",
+        "Obligatorio": 1,
+        "Bloques": []
+    },
+    {
+        "Programa": "CONTRACAMPO",
+        "Duracion": "1:23:56",
+        "Obligatorio": 1,
+        "Bloques": [
+            [
+                "PGM - CONTRACAMPO - T2_P4 - BLQ1.mp4",
+                "0:12:27"
+            ],
+            [
+                "PGM - CONTRACAMPO - T2_P4 - BLQ2.mp4",
+                "1:11:29"
+            ]
+        ]
+    },
+    {
+        "Programa": "MEGAFONO",
+        "Duracion": "0:13:46",
+        "Obligatorio": 0,
+        "Bloques": [
+            [
+                "PGM - MEGAFONO - T2_P4 - BLQ1.mp4",
+                "0:13:46"
+            ]
+        ]
+    },
+    {
+        "Programa": "NOTIU",
+        "Duracion": "0:0:0",
+        "Obligatorio": 0,
+        "Bloques": []
+    }
+]
