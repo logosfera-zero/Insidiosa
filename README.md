@@ -2,7 +2,7 @@
 ### INSIDIOSA
 ### Descripción y contexto
 ---
-Inventora de Nómina Sincronizada con Itinerario de Dudosa Operatividad de Señal Audiovisual
+Inventora de Nómina Sincronizada con Itinerario de Dudosa e Imprecisa Operatividad de Señal Audiovisual
 
 Este programa sirve para facilitar la rápida (pero no perfecta) creación de cronogramas de transmisión (playout schedule) de manera semi-automática.
 
