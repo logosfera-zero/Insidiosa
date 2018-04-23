@@ -17,5 +17,23 @@
         {   "programa": "NotiU", "obligatorio": 0},
         {   "programa": "EnCarerra", "obligatorio": 0}
     
+    ],
+    "tandas":    [
+        {   "tipo": "BARRIOS" },
+        {   "tipo": "CITAS" },
+        {   "tipo": "COLECCION" },
+        {   "tipo": "CORALES" },
+        {   "tipo": "INTELIGENCIA COLECTIVA" },
+        {   "tipo": "LOOKS" },
+        {   "tipo": "OFICIOS" },
+        {   "tipo": "RETRATOS" }
+    ],
+    "tandasRelleno":    [
+        {   "tipo": "CITAS" }
+    ],
+    "promos": [
+        {"tipo": "GENERICA", "dePrograma": 1 },
+        {"tipo": "SEMANAL", "dePrograma": 0 }
     ]
+
 }

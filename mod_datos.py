@@ -28,7 +28,7 @@ __status__ = "Desarrollo"
 
 
 config_rutas = leerConfiguracion("Rutas")
-config_programas = leerConfiguracion("Torta")
+
 matrizDatos = []
 
 
@@ -37,7 +37,7 @@ matrizDatos = []
 
 def obtenerDuracionProgramas(transmision,temporada):
 
-
+    config_programas = leerConfiguracion("Torta")
     
     # Por cada Programa
     for i in config_programas['programas']:
@@ -122,12 +122,197 @@ def obtenerDuracionProgramas(transmision,temporada):
 
 
 
+def obtenerDuracionTanda():
 
+    config_tandas = leerConfiguracion("Torta")
+    
+    # Por cada Tipo de Tanda
+    for i in config_tandas['tandas']:
+        print ("BUCLE DE " + str(i))
 
+       
+        
 
+        # Según este en mayus o minus las carpetas
+        if config_tandas['CarpetasenMayusculas']:
+            i_string = str(i['tipo']).upper()
+        else:
+            i_string = str(i['tipo']).lower()
 
+        # Forma la ruta probable
+        ruta = str(config_rutas["rutaTandas"] + i_string)
+    
+        # Confirma la existencia de ruta probable + carpeta de programa
+        if os.path.isdir(ruta):
+            imprimir= "\n LEYENDO CARPETA: " + ruta
+            print(imprimir)
+            
+            
+            
+
+            
+            
+            todasLasTandas = listdir(ruta)
+
+            for tanda in todasLasTandas:
+                
+                MatrizDeLaTanda = []
+
+                tanda = str(tanda)    
+
+                print(tanda[len(tanda) - 4:len(tanda)])
+            
+                if tanda[len(tanda) - 4:len(tanda)] == ".mp4":
+                    MatrizDeLaTanda.append(ruta + "\\" + tanda)
+                    MatrizDeLaTanda.append(tanda)
+                    
+                    
+                    print("Existe :" + MatrizDeLaTanda[0])
+                    
+                    batcmd = '"' + config_rutas["rutaExif"] + '" -api largefilesupport=1 -MediaDuration "'  + MatrizDeLaTanda[0] + '"' 
+
+                    try:
+                        duracion = str(subprocess.check_output(batcmd, shell=True))
+                    except subprocess.CalledProcessError as e:
+                        continue
+
+                    duracion = str(duracion).replace("b'Media Duration                  : ","")
+                    duracion = duracion[0:-5]
+                    print("Duración de la tanda " + str(MatrizDeLaTanda[1]) + ":  " , str(duracion))
+                    MatrizDeLaTanda.append(duracion)
+                    
+                    
+                
+              
 
                 
+                if len(MatrizDeLaTanda) != 0:
+
+                    matrizDatos.append(MatrizDeLaTanda)
+
+    
+    data = corregirDobleComilla(str(matrizDatos))
+    archi =  open ("Datos/Tandas.json","w")
+    archi.write(data)
+    archi.close()
 
 
-obtenerDuracionProgramas(4,2)
+
+
+def obtenerDuracionTandaRelleno():
+
+    config_tandas = leerConfiguracion("Torta")
+    
+    # Por cada Tipo de Tanda
+    for i in config_tandas['tandasRelleno']:
+        print ("BUCLE DE " + str(i))
+
+       
+        
+
+        # Según este en mayus o minus las carpetas
+        if config_tandas['CarpetasenMayusculas']:
+            i_string = str(i['tipo']).upper()
+        else:
+            i_string = str(i['tipo']).lower()
+
+        # Forma la ruta probable
+        ruta = str(config_rutas["rutaTandas"] + i_string)
+    
+        # Confirma la existencia de ruta probable + carpeta de programa
+        if os.path.isdir(ruta):
+            imprimir= "\n LEYENDO CARPETA: " + ruta
+            print(imprimir)
+            
+            
+            
+
+            
+            
+            todasLasTandas = listdir(ruta)
+
+            for tanda in todasLasTandas:
+                
+                MatrizDeLaTanda = []
+
+                tanda = str(tanda)    
+
+                #print(tanda[len(tanda) - 4:len(tanda)])
+            
+                if tanda[len(tanda) - 4:len(tanda)] == ".mp4":
+                    MatrizDeLaTanda.append(ruta + "\\" + tanda)
+                    MatrizDeLaTanda.append(tanda)
+                    
+                    
+                    print("Existe :" + MatrizDeLaTanda[0])
+                    
+                    batcmd = '"' + config_rutas["rutaExif"] + '" -api largefilesupport=1 -MediaDuration "'  + MatrizDeLaTanda[0] + '"' 
+
+                    try:
+                        duracion = str(subprocess.check_output(batcmd, shell=True))
+                    except subprocess.CalledProcessError as e:
+                        continue
+
+                    duracion = str(duracion).replace("b'Media Duration                  : ","")
+                    duracion = duracion[0:-5]
+                    print("Duración de la tanda " + str(MatrizDeLaTanda[1]) + ":  " , str(duracion))
+                    MatrizDeLaTanda.append(duracion)
+                    
+                    
+                
+              
+
+                
+                if len(MatrizDeLaTanda) != 0:
+
+                    matrizDatos.append(MatrizDeLaTanda)
+
+    
+    data = corregirDobleComilla(str(matrizDatos))
+    archi =  open ("Datos/TandasRelleno.json","w")
+    archi.write(data)
+    archi.close()
+
+
+
+def obtenerDuracionPromos(transmision,temporada):
+
+    config_promos = leerConfiguracion("Torta")
+
+    # Por cada Tipo de Promo
+    for i in config_promos['Promos']:
+
+        if i["dePrograma"] == 1:
+            
+            # Forma la ruta probable
+            ruta = str(config_promos["rutaPromos"])
+            todasLasPromos = listdir(ruta)
+
+            for promo in todasLasPromos:
+                
+                promoCorrecta = promo.find("PROMOS - " + i["tipo"] + " - ")
+
+                if promo[len(tanda) - 4:len(tanda)] == ".mp4" and promoCorrecta != -1:
+
+                    
+                    
+
+
+
+
+
+    
+    
+
+
+    
+    data = corregirDobleComilla(str(matrizDatos))
+    archi =  open ("Datos/TandasRelleno.json","w")
+    archi.write(data)
+    archi.close()
+
+
+
+obtenerDuracionTanda()
+obtenerDuracionTandaRelleno()
+#obtenerDuracionProgramas(4,2)
